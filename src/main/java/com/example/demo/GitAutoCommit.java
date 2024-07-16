@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 public class GitAutoCommit {
 
     /**
-     * git自动提交并推送
+     * git提交推送
      * @param args
      */
     public static void main(String[] args) {
@@ -47,7 +47,12 @@ public class GitAutoCommit {
         }
     }
 
-
+    /**
+     * 查看是否提交到暂存区
+     * @param repoPath
+     * @param gitPath
+     * @param command
+     */
     private static void executeGitCommandWiondos(String repoPath, String gitPath, String command) {
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.directory(new File(repoPath));
